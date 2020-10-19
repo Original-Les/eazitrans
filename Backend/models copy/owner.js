@@ -3,24 +3,29 @@ const express               = require("express"),
       
       
 // Model/Schema      
- const driverSchema = new mongoose.Schema({
-     username: String,
+ const ownerSchema = new mongoose.Schema({
+     username   : String,
      email: Array,
      cell: String,
      password: String,
-     f_name: String,
+     f_name : String,
      l_name: String,
-     license_num: String,
      created: {type: Date, default: Date.now},
      vehicles: [
+         {
+             type: mongoose.Schema.Types.ObjectId,
+             ref: "Vehicle"
+         }
+     ],
+     drivers: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Vehicle"
+            ref: "Driver"
         }
-    ],
+    ]
  });
 
  
  
- const Driver = mongoose.model("Driver", driverSchema);
- module.exports = Driver;
+ const Owner = mongoose.model("Owner", ownerSchema);
+ module.exports = Owner;
