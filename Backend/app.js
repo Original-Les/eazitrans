@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 
 mongoose.connect('mongodb://localhost:27017/eazitrans?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -11,12 +12,15 @@ mongoose.connect('mongodb://localhost:27017/eazitrans?retryWrites=true&w=majorit
 
 app.use(bodyParser.json());
 const Driver = require('./models/driver');
-// const Owner = require('./models/owner');
+const Owner = require('./models/owner');
 // const Passenger = require('./models/passenger');
 // const Vehicule = require('./models/vehicule');
 
 const driverRoutes = require('./routes/driver');
+const ownerRoutes = require('./routes/owner');
+
 app.use('/api/drivers', driverRoutes);
+app.use('/api/owners', ownerRoutes);
 
 
 app.use((req, res) => {

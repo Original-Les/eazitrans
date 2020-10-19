@@ -4,11 +4,11 @@ const express               = require("express"),
       
 // Model/Schema      
  const ownerSchema = new mongoose.Schema({
-     username   : String,
+     username: String,
      email: Array,
      cell: String,
      password: String,
-     f_name : String,
+     f_name: String,
      l_name: String,
      created: {type: Date, default: Date.now},
      vehicles: [

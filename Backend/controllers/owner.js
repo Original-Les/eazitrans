@@ -1,20 +1,19 @@
-// in controllers/driver.js
+// in controllers/Owner.js
 
-const Driver = require('../models/driver');
+const Owner = require('../models/owner');
 const bcrypt = require('bcrypt');
 
-exports.createDriver = (req, res, next) => {
-  const driver = new Driver({
+exports.createOwner = (req, res, next) => {
+  const owner = new Owner({
     username: req.body.username,
     email: req.body.email,
     cell: req.body.cell,
     password: req.body.password,
     f_name: req.body.f_name,
     l_name: req.body.l_name,
-    license_num: req.body.license_num
   });
 
-  driver.save().then(
+  owner.save().then(
     () => {
       res.status(201).json({
         message: 'Post saved successfully!'
@@ -29,12 +28,13 @@ exports.createDriver = (req, res, next) => {
   );
 };
 
-exports.getOneDriver = (req, res, next) => {
-    Driver.findOne({
+
+exports.getOneOwner = (req, res, next) => {
+    Owner.findOne({
       _id: req.params.id
     }).then(
-      (Driver) => {
-        res.status(200).json(Driver);
+      (Owner) => {
+        res.status(200).json(Owner);
       }
     ).catch(
       (error) => {
@@ -45,21 +45,19 @@ exports.getOneDriver = (req, res, next) => {
     );
   };
 
-exports.modifyDriver =  (req, res, next) => {
-    const driver = new Driver({
+exports.modifyOwner =  (req, res, next) => {
+    const owner = new Owner({
       _id: req.params.id,
       username: req.body.username,
       email: req.body.email,
       cell: req.body.cell,
-      password: req.body.password,
       f_name: req.body.f_name,
       l_name: req.body.l_name,
-      license_num: req.body.license_num
     });
-    driver.updateOne({_id: req.params.id}, Driver).then(
+    owner.updateOne({_id: req.params.id}, Owner).then(
       () => {
         res.status(201).json({
-          message: 'Driver updated successfully!'
+          message: 'Owner updated successfully!'
         });
       }
     ).catch(
@@ -71,8 +69,8 @@ exports.modifyDriver =  (req, res, next) => {
     );
   };
 
-  exports.deleteDriver = (req, res, next) => {
-    Driver.deleteOne({_id: req.params.id}).then(
+  exports.deleteOwner = (req, res, next) => {
+    Owner.deleteOne({_id: req.params.id}).then(
       () => {
         res.status(200).json({
           message: 'Deleted!'
@@ -87,10 +85,10 @@ exports.modifyDriver =  (req, res, next) => {
     );
   };
 
-  exports.getAllDriver = (req, res, next) => {
-    Driver.find().then(
-      (Drivers) => {
-        res.status(200).json(Drivers);
+  exports.getAllOwner = (req, res, next) => {
+    Owner.find().then(
+      (Owners) => {
+        res.status(200).json(Owners);
       }
     ).catch(
       (error) => {
