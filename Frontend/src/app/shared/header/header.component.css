@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Verdana, Tahoma, Georgia, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+header {
+    padding: 0.5% 1%;
+}
+
+#logo {
+    height: 3em;
+}
+
+nav a:first-of-type {
+    margin-left: 5em;
+}
+
+nav a {
+    color: #61825c;
+    padding-left: 2%;
+    position: relative;
+    bottom: 2em;
+}
+
+#bars {
+    display: none
+}
+
+@media only screen and (max-width: 490px) {
+    nav a {
+        padding: 0.2em;
+        position: relative;
+        display: block;
+        top: 2px;
+        text-align: end;
+    }
+
+    #bars {
+        display: inline-block;
+        height: 1.8em;
+        filter: invert(45%) sepia(8%) saturate(1407%) hue-rotate(66deg) brightness(101%) contrast(85%);
+        padding-right: 0.2em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #barLink {
+        float: right;
+        position: relative;
+        top: 0.7em;
+    }
+    
+    .clear {
+        clear: both;
+    }
+}
