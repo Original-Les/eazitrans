@@ -12,16 +12,13 @@ a {
 
 
 header {
-    padding: 2vw 5vw;
+    padding: 2vw 5vw 0;
 }
 
 #logo {
     height: 3em;
 }
 
-/* #hiddenElements {
-    display: inline;
-} */
 
 nav a:first-of-type {
     margin-left: 5em;
@@ -38,10 +35,6 @@ nav a {
 }
 
 @media only screen and (max-width: 550px) {
-    /* nav a:first-of-type {
-        margin-left: 5em;
-    } */
-
     header {
         padding: 2vw 0.5vw;
     }
