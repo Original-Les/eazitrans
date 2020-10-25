@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Verdana, Tahoma, Georgia, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #61825c;
+}
+
+
+main {
+    padding: 0 5vw;
+    /* max-width: 80%; */
+    margin: 0 auto;
+}
+
+article {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    margin: 2% 0;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#description {
+    padding-right: 10vw;
+}
+
+h2 {
+    margin: 1rem 0 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '\2713';
+    color: #61825c;
+    font-weight: bold;
+    margin-right: 0.4rem;
+}
+
+ul li {
+    margin-bottom: 0.2rem;
+}
+
+
+#imgDescription {
+    width: 40%;
+    height: 200%;
+    border-radius: 1em;
+}
+ 
+.green {
+    display: grid;
+    text-align: center;
+    background-color: rgba(97, 130, 92, 0.5);
+    grid-template-rows: 80% 20%;
+    height: 130%;
+}
+
+.green h2 {
+    font-weight: normal;
+    font-size: 2.5em;
+    /* line-height: 2em; */
+    /* transform: scale(1, 2); */
+}
+
+.green p {
+    align-self: end;
+    border-top: 1px solid white;
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        padding: 0;
+    }
+
+    article {
+        display: block;
+    }
+
+    #description {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    #description p {
+        text-align: justify;
+        /* padding: 0 5% 2%; */
+    }
+
+    #imgDescription {
+        width: 40%;
+        height: 10rem;
+        border-radius: 0 20% 0 20%;
+        margin: 0 25%;
+    }
+
+    #list {
+        display: none;
+    }
+
+    #register {
+        width: 100%;
+    }
+    
+    .pay {
+        flex-basis: 50%;
+    }
+
+    section {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .green {
+        grid-template-rows: 60% 40%;
+        height: 100%;
+    }
+
+
+    #register {
+        grid-column: 1 / span 2;
+    }
+
+    #register h2 {
+        font-size: 4em;
+        font-weight: normal;
+    }
+}
+
+
+@media only screen and (max-width: 361px) {
+    #imgDescription {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+}
