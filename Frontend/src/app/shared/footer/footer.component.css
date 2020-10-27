@@ -8,8 +8,9 @@
 
 a {
     text-decoration: none;
-    color: #61825c;
+    color: #3d6138;
 }
+
 
 
 footer {
@@ -25,8 +26,13 @@ p {
 #sponsors img {
     position: relative;
     top: 0.3em;
-    height: 1.2em;
-    padding-right: 0.5em;
+    height: 2em;
+    margin-top: 2em;
+    padding-right: 1em;
+}
+
+#a, #initiative {
+    font-size: 2em;
 }
 
 #sponsors #pluralsight {
@@ -58,8 +64,12 @@ footer {
     padding: 2vw 0.5vw;
 }
 
-#social img, #sponsors img {
+#social img {
     height: 1em;
+}
+
+#sponsors img {
+    height: 1.5em;
 }
 
 p {

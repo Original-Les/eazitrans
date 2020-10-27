@@ -1,0 +1,79 @@
+<app-header></app-header>
+<form action="POST">
+    <section>
+        <label for="username">Username:</label>
+        <input type="text" name="firstname" id="firstname" required><br>
+    </section>
+
+    <section>
+        <label for="firstname">First name:</label>
+        <input type="text" name="firstname" id="firstname" required><br>
+    </section>
+
+    <section>
+        <label for="lastname">Last name:</label>
+        <input type="text" name="lastname" id="lastname" required><br>
+    </section>
+
+    <section>
+        <label for="email">E-mail:</label>
+        <input type="mail" name="email" id="email" required><br>
+    </section>
+
+    <section>
+        <label for="telephone">Phone number:</label>
+        <input type="tel" name="telephone" id="telephone" required><br>
+    </section>
+
+    <section id="user">
+        <span>User:</span>
+        <input type="radio" name="user" id="conductor" value="conductor">
+        <label for="conductor">Conductor</label>
+
+        <input type="radio" name="user" id="driver" value="driver">
+        <label for="driver">Driver</label>
+
+        <input type="radio" name="user" id="owner" value="owner">
+        <label for="owner">Owner</label><p></p>
+
+        <input type="radio" name="user" id="passenger" value="passenger">
+        <label for="passenger">Passenger</label>
+
+        <input type="radio" name="user" id="tollagent" value="tollagent">
+        <label for="tollagent">Toll Agent</label>
+
+    </section>
+
+    <section>
+        <label for="firstpassword">Password:</label>
+        <input type="password" name="firstpassword" id="firstpassword" required><br>
+    </section>
+
+
+    <section>
+        <label for="secondpassword">Repeat Password:</label>
+        <input type="password" name="secondpassword" id="secondpassword" required><br>
+    </section>
+
+    <section id="owner">
+        <label for="num_vehicles">Number of Vehicles</label>
+        <input type="number" name="num_vehicles" id="num_vehicles" min="1">
+    </section>
+
+    <section id="driver">
+        <label for="license_num">License Number:</label>
+        <input type="number" name="license_num" id="license_num"><br>
+        <label for="license_plate">License Plate:</label>
+        <input type="text" name="license_plate" id="license"maxlength="7"><br>
+        <label for="make">Make:</label>
+        <input type="text" name="make" id="make"><br>
+        <label for="model">Model:</label>
+        <input type="text" name="model" id="model"><br>
+        <label for="year">Year:</label>
+        <input type="year" name="year_model" id="year"><br>
+    </section>
+
+    <section id="owner">
+        <label for="num_vehicles">Number of Vehicles</label>
+        <input type="number" name="num_vehicles" id="num_vehicles" min="1">
+<app-footer></app-footer>

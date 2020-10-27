@@ -7,13 +7,16 @@
 
 a {
     text-decoration: none;
-    color: #61825c;
+    color: #3d6138;
 }
 
 
+.green a {
+    color: black;
+}
+
 main {
     padding: 0 5vw;
-    /* max-width: 80%; */
     margin: 0 auto;
 }
 
@@ -43,7 +46,7 @@ ul {
 
 ul li::before {
     content: '\2713';
-    color: #61825c;
+    color: #3d6138;
     font-weight: bold;
     margin-right: 0.4rem;
 }
@@ -62,7 +65,7 @@ ul li {
 .green {
     display: grid;
     text-align: center;
-    background-color: rgba(97, 130, 92, 0.5);
+    background-color: rgba(61, 97, 56, 0.7);
     grid-template-rows: 80% 20%;
     height: 130%;
 }

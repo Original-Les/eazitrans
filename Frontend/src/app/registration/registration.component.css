@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Verdana, Tahoma, Georgia, sans-serif;
+}
+
+form {
+    padding: 2vw 5vw;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+}
+
+input {
+    margin: 1.5em 0 0;
+    border-radius: 0.8em;
+    height: 1.8em;
+    width: 15rem;
+}
+
+#user span {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-right: 0.5em;
+    cursor: default;
+
+}
+
+input[type="radio"] {
+    height: 1.7em;
+    width: 1.5rem;
+    position: relative;
+    top: 0.3em;
+}
+
+#user label {
+    font-size: 1em;
+    margin-right: 3em;
+
+}
+
+p {
+    display: none;
+}
+
+@media only screen and (max-width: 770px) {
+    p {
+        display: block;
+    }
+
+    #passenger {
+        margin-left: 4.5em;
+    }
+
+    #passenger, #tollagent {
+        margin-top: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    section {
+        border-bottom: 2px solid  #3d6138;
+    }
+
+    label {
+        display: block;
+        margin-top: 0.75em;
+    }
+
+    input {
+        margin: 0.2em 0 1.15em;
+    }
+}
