@@ -2,7 +2,7 @@
 <form action="POST">
     <section>
         <label for="username">Username:</label>
-        <input type="text" name="firstname" id="firstname" required><br>
+        <input type="text" name="username" id="username" required><br>
     </section>
 
     <section>
@@ -31,13 +31,13 @@
         <label for="conductor">Conductor</label>
 
         <input type="radio" name="user" id="driver" value="driver">
-        <label for="driver">Driver</label>
+        <label for="driver">Driver</label><p id="break"></p>
 
         <input type="radio" name="user" id="owner" value="owner">
         <label for="owner">Owner</label><p></p>
 
         <input type="radio" name="user" id="passenger" value="passenger">
-        <label for="passenger">Passenger</label>
+        <label for="passenger">Passenger</label><p id="break"></p>
 
         <input type="radio" name="user" id="tollagent" value="tollagent">
         <label for="tollagent">Toll Agent</label>
@@ -55,22 +55,31 @@
         <input type="password" name="secondpassword" id="secondpassword" required><br>
     </section>
 
-    <section id="owner">
-        <label for="num_vehicles">Number of Vehicles</label>
-        <input type="number" name="num_vehicles" id="num_vehicles" min="1">
-    </section>
+    <section id="driverForm">
+        <section>
+            <label for="license_num">License Number:</label>
+            <input type="number" name="license_num" id="license_num"><br>
+        </section>
 
-    <section id="driver">
-        <label for="license_num">License Number:</label>
-        <input type="number" name="license_num" id="license_num"><br>
-        <label for="license_plate">License Plate:</label>
-        <input type="text" name="license_plate" id="license"maxlength="7"><br>
-        <label for="make">Make:</label>
-        <input type="text" name="make" id="make"><br>
-        <label for="model">Model:</label>
-        <input type="text" name="model" id="model"><br>
-        <label for="year">Year:</label>
-        <input type="year" name="year_model" id="year"><br>
+        <section>
+            <label for="license_plate">License Plate:</label>
+            <input type="text" name="license_plate" id="license"maxlength="7"><br>
+        </section>
+
+        <section>
+            <label for="make">Make:</label>
+            <input type="text" name="make" id="make"><br>
+        </section>
+
+        <section>
+            <label for="model">Model:</label>
+            <input type="text" name="model" id="model"><br>
+        </section>
+
+        <section>
+            <label for="year">Year:</label>
+            <input type="year" name="year_model" id="year"><br>
+        </section>
     </section>
 
     <section id="owner">
